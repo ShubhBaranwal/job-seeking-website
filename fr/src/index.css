@@ -1,0 +1,50 @@
+
+body{
+  /* width: 100% !important; */
+  text-wrap: wrap !important;
+  overflow-x: hidden;
+  margin-right: 0px !important;
+}
+
+
+@media screen and (max-width:908px) {
+  
+.nav{
+  display: none;
+}
+
+}  
+
+.jobPosting > input{
+  border: none;
+  border-bottom: 1px solid green;
+}
+.myJob  h4{
+color: green;
+}
+.profile-container{
+  height: 80px;
+  z-index: 1 !important;
+}
+.hero{
+  z-index: 2 !important;
+/* margin-bottom: 300px !important; */
+}
+
+
+
+.link{
+  display: flex; justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  padding: 0 10px;
+}
+.link:hover{
+  border-bottom: 1px solid darkgreen;
+  color:darkgreen !important;
+}
+
+.icon{
+  font-size: 30px;
+}
