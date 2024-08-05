@@ -13,8 +13,17 @@ import {errorMiddleware} from "./middlewares/error.js"
 const app=express()
 dotenv.config({path:"./config/config.env"})
 
+<<<<<<< HEAD
  app.use(cors())
 
+=======
+// app.use(cors())
+app.use(cors({
+    origin:[process.env.FRONTEND_URL],
+    methods:['POST','GET','DELETE','UPDATE','PUT'],
+    credentials:true
+}))
+>>>>>>> 2287281 (Fixed the bug in the user authentication module)
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
