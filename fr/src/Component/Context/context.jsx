@@ -32,7 +32,7 @@ useEffect(()=>{
      }
  };
 <<<<<<< HEAD
- axios.get("http://localhost:4000/api/v1/user/getUser", config).then((res)=>{
+ axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
 =======
  axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
 >>>>>>> 50f4bc7 (Fix backend url)
