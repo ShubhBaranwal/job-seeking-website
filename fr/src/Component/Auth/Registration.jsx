@@ -26,7 +26,11 @@ let sendData={
 }
 console.log(sendData);
 try {
+<<<<<<< HEAD
   const response=await axios.post("http://localhost:4000/api/v1/user/register",sendData,
+=======
+  const response=await axios.post("https://job-seeking-website-mb83.onrender.com/api/v1/user/register",sendData,
+>>>>>>> 50f4bc7 (Fix backend url)
 )
 let {token}=response.data
 Cookies.set('token',token,{expires:7})

@@ -46,7 +46,11 @@ const MyJob = ({ job }) => {
                     'token': token
                 }
             };
+<<<<<<< HEAD
 let response= await axios.delete(`http://localhost:4000/api/v1/job/delete/${jobId}`, config);
+=======
+let response= await axios.delete(`https://job-seeking-website-mb83.onrender.com/${jobId}`, config);
+>>>>>>> 50f4bc7 (Fix backend url)
             setRefresh(true)
 
             // setMyJobs(myJobs.filter(job => job._id !== jobId));
@@ -66,7 +70,11 @@ async function handleUpdate(){
                 'token': token
             }
         }
+<<<<<<< HEAD
 let response=await axios.put(`http://localhost:4000/api/v1/job/update/${job._id}`,editedJob,config)
+=======
+let response=await axios.put(`https://job-seeking-website-mb83.onrender.com/api/v1/job/update/${job._id}`,editedJob,config)
+>>>>>>> 50f4bc7 (Fix backend url)
 console.log(response);
 setRefresh(!refresh)    
 handleEditJob()

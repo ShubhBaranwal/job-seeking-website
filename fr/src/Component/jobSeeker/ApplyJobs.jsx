@@ -33,7 +33,11 @@ const ApplyJobs = () => {
       applyJob.append("image", resume);
       applyJob.append("jobId", jobId.id);
 
+<<<<<<< HEAD
       await axios.post('http://localhost:4000/api/v1/application/post', applyJob, {
+=======
+      await axios.post('https://job-seeking-website-mb83.onrender.com/api/v1/application/post', applyJob, {
+>>>>>>> 50f4bc7 (Fix backend url)
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`
