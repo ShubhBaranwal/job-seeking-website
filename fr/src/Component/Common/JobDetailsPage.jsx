@@ -12,12 +12,9 @@ console.log(Jobid.id);
 
 useEffect(()=>{
    async function  getJobDetails(){
-<<<<<<< HEAD
-    let response=await axios.get(`http://localhost:4000/api/v1/job/getJobDetails/${Jobid.id}`)
-=======
+
     let response=await axios.get(`https://job-seeking-website-mb83.onrender.com/api/v1/job/getJobDetails/${Jobid.id}`)
->>>>>>> 50f4bc7 (Fix backend url)
-    console.log(response.data);
+    
  setJobDetails(response.data)
   }
    getJobDetails()

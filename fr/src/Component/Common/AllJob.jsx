@@ -13,11 +13,8 @@ const AllJob = () => {
   useEffect(() => {
     async function getAllJobs() {
       try {
-<<<<<<< HEAD
-        let response = await axios.get("http://localhost:4000/api/v1/job/getAll");
-=======
+        // let response = await axios.get("http://localhost:4000/api/v1/job/getAll");
         let response = await axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/job/getAll");
->>>>>>> 50f4bc7 (Fix backend url)
         setAllJobs(response.data.jobs);
         setFilteredJobs(response.data.jobs); // Initialize filtered jobs with all jobs
       } catch (error) {

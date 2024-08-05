@@ -21,12 +21,8 @@ async function handleLogin(){
     role:roleRef.current.value
   }
 try {
-<<<<<<< HEAD
-  let response=await axios.post("http://localhost:4000/api/v1/user/login",data);
-=======
   let response=await axios.post("https://job-seeking-website-mb83.onrender.com/api/v1/user/login",data);
->>>>>>> 50f4bc7 (Fix backend url)
-  console.log(response.data.token);
+;
   let {token}=response.data
 Cookies.set('token',token,{expires:7})
   setAuthorized(true)

@@ -28,11 +28,8 @@ const MyJobs = () => {
                         'token': token
                     }
                 };
-<<<<<<< HEAD
-                let response = await axios.get("http://localhost:4000/api/v1/job/getmyjobs", config);
-=======
+
                 let response = await axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/job/getmyjobs", config);
->>>>>>> 50f4bc7 (Fix backend url)
                 setMyJobs(response.data.myJobs);
             } catch (error) {
                 console.error("Error fetching jobs:", error);

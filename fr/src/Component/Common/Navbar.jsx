@@ -26,13 +26,8 @@ async function handleLogout() {
       }
     };
     // Send a request to log out the user on the server
-<<<<<<< HEAD
-    let response = await axios.get("http://localhost:4000/api/v1/user/logout",config);
-=======
     let response = await axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/logout",config);
->>>>>>> 50f4bc7 (Fix backend url)
-    console.log(response);
-    
+
     // Clear user data in the frontend
     document.cookie="token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";    
     setAuthorized(false); // Set authorized state to false
