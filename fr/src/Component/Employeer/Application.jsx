@@ -23,12 +23,9 @@ const Application = ({application}) => {
               }
             };
             console.log(data);
-<<<<<<< HEAD
-                let response=await axios.put("http://localhost:4000/api/v1/application/employerReviewApplication",data,config)
-=======
+
                 let response=await axios.put("https://job-seeking-website-mb83.onrender.com/api/v1/application/employerReviewApplication",data,config)
->>>>>>> 50f4bc7 (Fix backend url)
-            console.log(response);
+
           
           
 
