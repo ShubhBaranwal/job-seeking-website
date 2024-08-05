@@ -31,12 +31,9 @@ useEffect(()=>{
          'token': token
      }
  };
-<<<<<<< HEAD
+
  axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
-=======
- axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
->>>>>>> 50f4bc7 (Fix backend url)
-   console.log(res.data.user,"ye lo user")
+
    setAuthorized(true)
    setUser(res.data.user)
  })
