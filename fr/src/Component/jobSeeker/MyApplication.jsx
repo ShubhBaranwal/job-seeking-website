@@ -23,6 +23,10 @@ useEffect(()=>{
   ;(async function(){
 
       let response=await axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/application/jobseeker/getall",config)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f7b437897eda7faaa325a827472c792beb39f60
       setAllApplicant(response.data.applications)
       console.log(response.data.applications);
   })()

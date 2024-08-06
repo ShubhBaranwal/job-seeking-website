@@ -71,9 +71,15 @@ const JobPost = () => {
         }
       };
 
+<<<<<<< HEAD
       // Make the POST request with axios
       let response = await axios.post("https://job-seeking-website-mb83.onrender.com/api/v1/job/post", data, config);
       console.log("Job posted successfully", response);
+=======
+ 
+      let response = await axios.post("https://job-seeking-website-mb83.onrender.com/api/v1/job/post", data, config);
+
+>>>>>>> 6f7b437897eda7faaa325a827472c792beb39f60
     
     Swal.fire({
       title:"Success",
