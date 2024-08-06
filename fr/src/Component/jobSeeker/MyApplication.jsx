@@ -21,11 +21,8 @@ useEffect(()=>{
     }
   };
   ;(async function(){
-<<<<<<< HEAD
-      let response=await axios.get("http://localhost:4000/api/v1/application/jobseeker/getall",config)
-=======
+
       let response=await axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/application/jobseeker/getall",config)
->>>>>>> 50f4bc7 (Fix backend url)
       setAllApplicant(response.data.applications)
       console.log(response.data.applications);
   })()

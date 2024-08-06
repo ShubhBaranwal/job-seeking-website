@@ -23,11 +23,7 @@ const Application = ({application}) => {
               }
             };
             console.log(data);
-<<<<<<< HEAD
-                let response=await axios.put("http://localhost:4000/api/v1/application/employerReviewApplication",data,config)
-=======
                 let response=await axios.put("https://job-seeking-website-mb83.onrender.com/api/v1/application/employerReviewApplication",data,config)
->>>>>>> 50f4bc7 (Fix backend url)
             console.log(response);
           
           
@@ -57,7 +53,7 @@ const Application = ({application}) => {
       </select>
       </div>
 
-    <button className='btn btn-success' onClick={() => openPDF(`http://localhost:4000/${application.image}`)}>View Resume</button>
+    <button className='btn btn-success' onClick={() => openPDF(`https://job-seeking-website-mb83.onrender.com/${application.image}`)}>View Resume</button>
 
     </div>
   )

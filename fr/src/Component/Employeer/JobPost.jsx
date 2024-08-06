@@ -72,11 +72,7 @@ const JobPost = () => {
       };
 
       // Make the POST request with axios
-<<<<<<< HEAD
-      let response = await axios.post("http://localhost:4000/api/v1/job/post", data, config);
-=======
       let response = await axios.post("https://job-seeking-website-mb83.onrender.com/api/v1/job/post", data, config);
->>>>>>> 50f4bc7 (Fix backend url)
       console.log("Job posted successfully", response);
     
     Swal.fire({

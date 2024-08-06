@@ -7,8 +7,9 @@ const AllJob = () => {
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [minSalary, setMinSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(150000); // Example max salary
+  const [loading, setLoading] = useState(true);
 
-  const searchValueRef = useRef();
+  const searchValueRef = useRef('');
 
   useEffect(() => {
     async function getAllJobs() {
@@ -19,6 +20,8 @@ const AllJob = () => {
         setFilteredJobs(response.data.jobs); // Initialize filtered jobs with all jobs
       } catch (error) {
         console.error("Error fetching jobs:", error);
+      } finally {
+        setLoading(false);
       }
     }
     getAllJobs();
@@ -29,18 +32,20 @@ const AllJob = () => {
   }, [minSalary, maxSalary]);
 
   function handleSearch() {
-    let value = searchValueRef.current.value.toLowerCase();
-    let filtered = AllJobs.filter(job =>
-      (job.title?.toLowerCase().includes(value) ||
-      job.description?.toLowerCase().includes(value) ||
-      job.category?.toLowerCase().includes(value) ||
-      job.location?.toLowerCase().includes(value) ||
-      job.country?.toLowerCase().includes(value) ||
-      job.city?.toLowerCase().includes(value) ||
-      (job.fixedSalary?.toString().includes(value) || '')) &&
-      (job.fixedSalary >= minSalary && job.fixedSalary <= maxSalary)
-    );
-    setFilteredJobs(filtered);
+    if (searchValueRef.current) {
+      let value = searchValueRef.current.value.toLowerCase();
+      let filtered = AllJobs.filter(job =>
+        (job.title?.toLowerCase().includes(value) ||
+        job.description?.toLowerCase().includes(value) ||
+        job.category?.toLowerCase().includes(value) ||
+        job.location?.toLowerCase().includes(value) ||
+        job.country?.toLowerCase().includes(value) ||
+        job.city?.toLowerCase().includes(value) ||
+        (job.fixedSalary?.toString().includes(value) || '')) &&
+        (job.fixedSalary >= minSalary && job.fixedSalary <= maxSalary)
+      );
+      setFilteredJobs(filtered);
+    }
   }
 
   function handleMinSalaryChange(e) {
@@ -49,6 +54,16 @@ const AllJob = () => {
 
   function handleMaxSalaryChange(e) {
     setMaxSalary(Number(e.target.value));
+  }
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center mt-5">
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   return (

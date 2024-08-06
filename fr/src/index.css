@@ -1,50 +1,73 @@
-
-body{
-  /* width: 100% !important; */
+body {
   text-wrap: wrap !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   margin-right: 0px !important;
+width: 100%;
 }
 
-
-@media screen and (max-width:908px) {
-  
-.nav{
-  display: none;
+.main-container{
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-}  
+@media screen and (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+  .navbar{
+    width: 100vw !important;
+    /* background-color: lightblue !important; */
+  }
+}
 
-.jobPosting > input{
+.jobPosting > input {
   border: none;
   border-bottom: 1px solid green;
 }
-.myJob  h4{
-color: green;
+
+.myJob h4 {
+  color: green;
 }
-.profile-container{
-  height: 80px;
-  z-index: 1 !important;
+
+.profile-container {
+  position: relative;
 }
-.hero{
+
+.profile-box {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  background-color: #343a40;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+
+.profile-box p {
+  margin: 0 0 10px;
+}
+
+.hero {
   z-index: 2 !important;
-/* margin-bottom: 300px !important; */
 }
 
-
-
-.link{
-  display: flex; justify-content: center;
+.link {
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
-
   padding: 0 10px;
 }
-.link:hover{
+
+.link:hover {
   border-bottom: 1px solid darkgreen;
-  color:darkgreen !important;
+  color: darkgreen !important;
 }
 
-.icon{
+.icon {
   font-size: 30px;
 }
