@@ -31,14 +31,10 @@ useEffect(()=>{
          'token': token
      }
  };
-<<<<<<< HEAD
- axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
-   console.log(res.data.user,"ye lo user")
-=======
+
 
  axios.get("https://job-seeking-website-mb83.onrender.com/api/v1/user/getUser", config).then((res)=>{
 
->>>>>>> 6f7b437897eda7faaa325a827472c792beb39f60
    setAuthorized(true)
    setUser(res.data.user)
  })

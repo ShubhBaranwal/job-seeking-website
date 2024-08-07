@@ -48,10 +48,6 @@ const MyJob = ({ job }) => {
             };
 
 let response= await axios.delete(`https://job-seeking-website-mb83.onrender.com/${jobId}`, config);
-<<<<<<< HEAD
-=======
-
->>>>>>> 6f7b437897eda7faaa325a827472c792beb39f60
             setRefresh(true)
 
             // setMyJobs(myJobs.filter(job => job._id !== jobId));
@@ -73,11 +69,7 @@ async function handleUpdate(){
         }
 
 let response=await axios.put(`https://job-seeking-website-mb83.onrender.com/api/v1/job/update/${job._id}`,editedJob,config)
-<<<<<<< HEAD
-console.log(response);
-=======
 
->>>>>>> 6f7b437897eda7faaa325a827472c792beb39f60
 setRefresh(!refresh)    
 handleEditJob()
 

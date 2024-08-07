@@ -75,7 +75,7 @@ const Navbar = () => {
                     <div className="profile-box">
                       <p className="mb-1">Name: {user.name}</p>
                       <p className="mb-1">Email: {user.email}</p>
-                      <button onClick={handleLogout} className="btn btn-danger">Logout</button>
+                      {/* <button onClick={handleLogout} className="btn btn-danger">Logout</button> */}
                     </div>
                   )}
                 </div>
