@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Context } from '../Context/context';
 import axios from 'axios';
 import Cookies from "js-cookie";
+import logo from "../../assets/apna logo.jpg";
+
 
 const Navbar = () => {
   const { user, setAuthorized, setUser, authorized, showProfile, setShowProfile } = useContext(Context);
@@ -34,7 +36,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light  ">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="/apna logo.jpg" width="100px" height="100px" alt="Logo" />
+          <img src={logo} width="100px" height="100px" alt="Logo" />
         </Link>
         <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

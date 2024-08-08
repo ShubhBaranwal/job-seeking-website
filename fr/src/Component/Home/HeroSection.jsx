@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaBuilding, FaSuitcase, FaUsers, FaUserPlus } from "react-icons/fa";
+import logo from "../../assets/heroS.jpg";
 
 const HeroSection = () => {
 
@@ -43,7 +44,7 @@ const HeroSection = () => {
 
             <div className=" px-5 col-xl-5 col-md-5 col-sm-12 col-12">
                 
-                <img src="/heroS.jpg" className='img-fluid   mt-2' />
+                <img src={logo} className='img-fluid   mt-2' />
                 </div>
 
                 <div className="my-5 details d-flex justify-content-around flex-wrap">
